@@ -29,8 +29,8 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v2
         with:
-          role-to-assume: ${{ secrets.AWS_ROLE }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          role-to-assume: github-aws-oidc-Role-D4ASNWWYMLDD
+          aws-region: eu-west-1
           
       - name: List S3 buckets
         run: aws s3 ls
